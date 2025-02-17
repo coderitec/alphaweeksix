@@ -16,3 +16,10 @@
     transform: scale(1.5);
     /* transition: all 3s ease-out; */
 }
+div{
+    @apply grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 lg:grid-rows-[500px_300px_600px] sm:grid-rows-[repeat(3,_250px)] grid-rows-[repeat(6,_300px)]
+}
+div > section{
+    @apply  border-8 border-black lg:border-dotted sm:border-dashed border-double
+}
+

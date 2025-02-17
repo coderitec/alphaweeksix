@@ -6,10 +6,22 @@
     <!-- <link rel="stylesheet" href="./scale.css"> -->
     <link rel="stylesheet" href="./jerry.css">
     <title>SCALE</title>
+
+    <style>
+        img:hover{
+            filter: blur(3px);
+            
+        }
+
+        section:nth-of-type(5){
+            background-color: rgba(0, 0, 255, 0.583);
+            background-blend-mode: color-dodge;
+        }
+    </style>
 </head>
 <body>
 
-    <nav>
+    <nav class="lg:fixed inset-x-0 z-1">
         <ul class="flex sm:flex-row flex-col justify-between bg-fuchsia-800 text-white px-16 capitalize sm:min-h-32 min-h-screen items-center">
             <li>item1</li>
             <li>item2</li>
@@ -18,15 +30,39 @@
             <li>item5</li>
         </ul>
     </nav>
-   <h1>FUNDAMENTAL OF WEB DEVELOPMENT</h1>
-   <section class="box">
-       <h2>scale</h2>
-    </section> 
-    <section>
-       <h2>Rotate</h2>
-   </section>
-   <section>
-    <h2>translate</h2>
-   </section>
+    <main class="relative top-32">
+
+        <h1 class="text-center text-4xl py-16 bg-slate-950/85  text-white">FUNDAMENTAL OF WEB DEVELOPMENT</h1>
+        <div>
+            <section>
+                <h2>1</h2>
+            </section>
+            
+            <section class="lg:col-start-1 lg:row-start-2">
+                <h2>2</h2>
+
+            </section>
+            
+            <section class="lg:col-start-1 lg:col-end-4">
+                <h2>3</h2>
+            </section>
+            
+            <section class="lg:col-start-2 lg:row-start-2">
+                <h2>4</h2>
+            </section>
+            
+            <section class="lg:row-span-2 lg:col-start-3 lg:row-start-1 bg-[url(https://images.pexels.com/photos/28766991/pexels-photo-28766991/free-photo-of-stylish-couple-portrait-outdoors-in-abuja-setting.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)]">
+                <h2>5</h2>
+            </section>
+            
+            <section class="lg:col-start-2 lg:row-start-1">
+                <h2>6</h2>
+
+                <img src="https://images.pexels.com/photos/28766991/pexels-photo-28766991/free-photo-of-stylish-couple-portrait-outdoors-in-abuja-setting.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="persons"
+                class="w-64 block m-auto hover:sepia-50 cursor-pointer">
+            </section>
+            
+        </div>
+    </main>
 </body>
 </html>

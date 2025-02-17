@@ -521,14 +521,32 @@
   .collapse {
     visibility: collapse;
   }
+  .fixed {
+    position: fixed;
+  }
   .relative {
     position: relative;
+  }
+  .inset-x-0 {
+    inset-inline: calc(var(--spacing) * 0);
+  }
+  .top-32 {
+    top: calc(var(--spacing) * 32);
+  }
+  .z-1 {
+    z-index: 1;
+  }
+  .m-auto {
+    margin: auto;
   }
   .block {
     display: block;
   }
   .flex {
     display: flex;
+  }
+  .grid {
+    display: grid;
   }
   .inline-flex {
     display: inline-flex;
@@ -539,20 +557,23 @@
   .table {
     display: table;
   }
-  .h-screen {
-    height: 100vh;
-  }
-  .min-h-32 {
-    min-height: calc(var(--spacing) * 32);
-  }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
+  }
+  .w-64 {
+    width: calc(var(--spacing) * 64);
   }
   .border-collapse {
     border-collapse: collapse;
   }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
@@ -573,8 +594,39 @@
   .bg-fuchsia-800 {
     background-color: var(--color-fuchsia-800);
   }
+  .bg-slate-950 {
+    background-color: var(--color-slate-950);
+  }
+  .bg-slate-950\/5 {
+    background-color: color-mix(in oklab, var(--color-slate-950) 5%, transparent);
+  }
+  .bg-slate-950\/20 {
+    background-color: color-mix(in oklab, var(--color-slate-950) 20%, transparent);
+  }
+  .bg-slate-950\/65 {
+    background-color: color-mix(in oklab, var(--color-slate-950) 65%, transparent);
+  }
+  .bg-slate-950\/85 {
+    background-color: color-mix(in oklab, var(--color-slate-950) 85%, transparent);
+  }
+  .bg-slate-950\/95 {
+    background-color: color-mix(in oklab, var(--color-slate-950) 95%, transparent);
+  }
+  .bg-\[url\(https\:\/\/images\.pexels\.com\/photos\/28766991\/pexels-photo-28766991\/free-photo-of-stylish-couple-portrait-outdoors-in-abuja-setting\.jpeg\?auto\=compress\&cs\=tinysrgb\&w\=1260\&h\=750\&dpr\=1\)\] {
+    background-image: url(https://images.pexels.com/photos/28766991/pexels-photo-28766991/free-photo-of-stylish-couple-portrait-outdoors-in-abuja-setting.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  }
   .px-16 {
     padding-inline: calc(var(--spacing) * 16);
+  }
+  .py-16 {
+    padding-block: calc(var(--spacing) * 16);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .text-white {
     color: var(--color-white);
@@ -588,6 +640,14 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .blur {
+    --tw-blur: blur(8px);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .sepia {
+    --tw-sepia: sepia(100%);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
@@ -605,6 +665,14 @@
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
   }
+  .hover\:sepia-50 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-sepia: sepia(50%);
+        filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+      }
+    }
+  }
   .sm\:min-h-32 {
     @media (width >= 40rem) {
       min-height: calc(var(--spacing) * 32);
@@ -613,6 +681,46 @@
   .sm\:flex-row {
     @media (width >= 40rem) {
       flex-direction: row;
+    }
+  }
+  .lg\:fixed {
+    @media (width >= 64rem) {
+      position: fixed;
+    }
+  }
+  .lg\:col-start-1 {
+    @media (width >= 64rem) {
+      grid-column-start: 1;
+    }
+  }
+  .lg\:col-start-2 {
+    @media (width >= 64rem) {
+      grid-column-start: 2;
+    }
+  }
+  .lg\:col-start-3 {
+    @media (width >= 64rem) {
+      grid-column-start: 3;
+    }
+  }
+  .lg\:col-end-4 {
+    @media (width >= 64rem) {
+      grid-column-end: 4;
+    }
+  }
+  .lg\:row-span-2 {
+    @media (width >= 64rem) {
+      grid-row: span 2 / span 2;
+    }
+  }
+  .lg\:row-start-1 {
+    @media (width >= 64rem) {
+      grid-row-start: 1;
+    }
+  }
+  .lg\:row-start-2 {
+    @media (width >= 64rem) {
+      grid-row-start: 2;
     }
   }
 }
@@ -629,6 +737,39 @@
 }
 .box:hover {
   transform: scale(1.5);
+}
+div {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(6, 300px);
+  gap: calc(var(--spacing) * 4);
+  @media (width >= 40rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media (width >= 40rem) {
+    grid-template-rows: repeat(3, 250px);
+  }
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @media (width >= 64rem) {
+    grid-template-rows: 500px 300px 600px;
+  }
+}
+div > section {
+  border-style: var(--tw-border-style);
+  border-width: 8px;
+  --tw-border-style: double;
+  border-style: double;
+  border-color: var(--color-black);
+  @media (width >= 40rem) {
+    --tw-border-style: dashed;
+    border-style: dashed;
+  }
+  @media (width >= 64rem) {
+    --tw-border-style: dotted;
+    border-style: dotted;
+  }
 }
 @keyframes spin {
   to {
