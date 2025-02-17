@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
 h1{
     background-color: #888;
     color: #fff;
@@ -6,3 +13,33 @@ h1{
     width: 70%;
     margin: auto;
 }
+
+.ball{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: crimson;
+    margin: auto;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: 6;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateY(75vh);
+        background-color: crimson;
+        height: 10px;
+    }
+
+    100%{
+        transform: translateY(0);
+        background-color: blue;
+        height: 100px;
+
+    }
+
+   
+} 
